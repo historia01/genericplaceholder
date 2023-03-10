@@ -6051,8 +6051,8 @@ object Form1: TForm1
     Proportional = True
   end
   object Label3: TLabel
-    Left = 708
-    Top = 574
+    Left = 709
+    Top = 550
     Width = 70
     Height = 18
     Caption = 'VER 0.1'
@@ -8053,6 +8053,21 @@ object Form1: TForm1
     Proportional = True
     ShowHint = True
     OnClick = Image4Click
+  end
+  object Label2: TLabel
+    Left = 539
+    Top = 574
+    Width = 240
+    Height = 18
+    Cursor = crHandPoint
+    Caption = 'VISITA NUESTRO SITIO WEB'
+    Font.Charset = OEM_CHARSET
+    Font.Color = clRed
+    Font.Height = -19
+    Font.Name = 'Terminal'
+    Font.Style = [fsUnderline]
+    ParentFont = False
+    OnClick = Label2Click
   end
   object MainMenu1: TMainMenu
     object File1: TMenuItem

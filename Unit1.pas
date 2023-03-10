@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, jpeg, Unit2, pngimage, ExtCtrls, Menus, Vcl.Tabs,
   Vcl.DockTabSet, Vcl.CustomizeDlg, System.TypInfo, Soap.WebServExp,
-  Soap.WSDLBind, Xml.XMLSchema, Soap.WSDLPub;
+  Soap.WSDLBind, Xml.XMLSchema, Soap.WSDLPub, ShellAPI;
 
 type
   TForm1 = class(TForm)
@@ -65,6 +65,7 @@ type
     Image4: TImage;
     Inventario1: TMenuItem;
     Crear1: TMenuItem;
+    Label2: TLabel;
     procedure Productos1Click(Sender: TObject);
     procedure Clientes1Click(Sender: TObject);
     procedure Exit1Click(Sender: TObject);
@@ -80,6 +81,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure LoginWindowOpen(Sender: TObject);
     procedure Crear1Click(Sender: TObject);
+    procedure Label2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -94,6 +96,11 @@ implementation
 uses Unit3, Unit4, Unit5, Unit6, Unit7, Unit9, Unit10;
 
 {$R *.dfm}
+
+procedure TForm1.Label2Click(Sender: TObject);
+begin
+  ShellExecute(0, 'open', 'https://www.example.com', nil, nil, SW_SHOWNORMAL);
+end;
 
 procedure TForm1.LoginWindowOpen(Sender: TObject);
 begin
