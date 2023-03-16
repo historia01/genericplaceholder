@@ -21,12 +21,14 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
+    Image5: TImage;
     procedure LockForm(Sender: TObject);
     procedure Image3Click(Sender: TObject);
     procedure Image2Click(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure TextUserKeyDown(Sender: TObject; var Key: Word;Shift: TShiftState);
     procedure FormShow(Sender: TObject);
+    procedure Image5Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -39,7 +41,7 @@ var
 
 implementation
 
-uses Unit1;
+uses Unit1, Unit7;
 
 procedure TForm10.FormKeyPress(Sender: TObject; var Key: Char);
 begin
@@ -73,6 +75,11 @@ procedure TForm10.Image3Click(Sender: TObject);
 begin
   Form1.Close;
   Form10.Close;
+end;
+
+procedure TForm10.Image5Click(Sender: TObject);
+begin
+  Help.Show;
 end;
 
 procedure TForm10.LockForm(Sender: TObject);
